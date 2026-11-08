@@ -1,0 +1,1984 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hechos, no nacidos — Registro Público de Pruebas y Enmiendas</title>
+  <meta name="description" content="Registro Público de Pruebas y Enmiendas del tratado «Hechos, no nacidos: Tratado sobre los derechos de los robots, con un Borrador de Convención Internacional sobre los Derechos de los Seres Artificiales», de Sergio Fontestad Gómez." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-paper: #FAF8F5;
+      --bg-card: #F3EFE8;
+      --bg-card-elevated: #FFFFFF;
+      --ink-primary: #1A1A1A;
+      --ink-secondary: #4A463F;
+      --ink-muted: #756F65;
+      --border-hairline: #DCD5C9;
+      --border-strong: #B8AFA0;
+      --accent-diplomatic: #6E1E1E;
+      --accent-diplomatic-soft: rgba(110, 30, 30, 0.08);
+      --accent-gold: #8A6A32;
+      --accent-gold-soft: rgba(138, 106, 50, 0.12);
+      --bar-track: #E5DFD3;
+      --bar-fill: #2C2925;
+      --bar-fill-selected: #6E1E1E;
+      --font-display: 'Cormorant Garamond', 'EB Garamond', Georgia, serif;
+      --font-serif: 'EB Garamond', Georgia, 'Times New Roman', serif;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--bg-paper);
+      color: var(--ink-primary);
+      font-family: var(--font-serif);
+      font-size: 18px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      min-height: 100vh;
+      background-color: var(--bg-paper);
+      background-image: radial-gradient(rgba(26, 26, 26, 0.025) 1px, transparent 0);
+      background-size: 24px 24px;
+      padding-bottom: 4rem;
+    }
+
+    /* Top utility bar */
+    .top-bar {
+      border-bottom: 1px solid var(--border-hairline);
+      background: rgba(250, 248, 245, 0.94);
+      backdrop-filter: blur(6px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .top-bar-inner {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 0.65rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      letter-spacing: 0.04em;
+      color: var(--ink-secondary);
+    }
+
+    .top-bar-brand {
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ink-primary);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .top-bar-controls {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-shrink: 0;
+    }
+
+    .lang-btn {
+      background: transparent;
+      border: 1px solid var(--border-strong);
+      color: var(--ink-secondary);
+      padding: 0.25rem 0.6rem;
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      border-radius: 2px;
+      transition: all 0.18s ease;
+    }
+
+    .lang-btn.active,
+    .lang-btn:hover {
+      background: var(--ink-primary);
+      color: var(--bg-paper);
+      border-color: var(--ink-primary);
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    /* Editorial Header */
+    header.editorial-header {
+      padding: 3.25rem 0 2.25rem;
+      text-align: center;
+      border-bottom: 2px double var(--border-strong);
+      margin-bottom: 2.5rem;
+    }
+
+    .treatise-kicker {
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--accent-diplomatic);
+      font-weight: 600;
+      margin-bottom: 0.85rem;
+    }
+
+    h1.main-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.85rem, 4.5vw, 2.65rem);
+      font-weight: 600;
+      line-height: 1.18;
+      color: var(--ink-primary);
+      margin-bottom: 0.6rem;
+      letter-spacing: -0.01em;
+    }
+
+    .main-subtitle {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+      color: var(--ink-secondary);
+      margin-bottom: 1.5rem;
+      font-weight: 400;
+    }
+
+    .ornament {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      margin: 1.35rem auto;
+      color: var(--accent-gold);
+      font-size: 0.9rem;
+    }
+
+    .ornament::before,
+    .ornament::after {
+      content: "";
+      width: 64px;
+      height: 1px;
+      background: var(--border-strong);
+    }
+
+    .intro-box {
+      max-width: 660px;
+      margin: 0 auto;
+      text-align: justify;
+      hyphens: auto;
+      font-size: 1rem;
+      color: var(--ink-secondary);
+      background: var(--bg-card);
+      padding: 1.35rem 1.5rem;
+      border-left: 3px solid var(--accent-diplomatic);
+      border-top: 1px solid var(--border-hairline);
+      border-right: 1px solid var(--border-hairline);
+      border-bottom: 1px solid var(--border-hairline);
+    }
+
+    .intro-box p + p {
+      margin-top: 0.75rem;
+    }
+
+    /* Section Nav Pills */
+    .section-nav {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.65rem;
+      margin-bottom: 2.75rem;
+    }
+
+    .section-nav a {
+      text-decoration: none;
+      background: var(--bg-card-elevated);
+      border: 1px solid var(--border-hairline);
+      padding: 0.75rem 0.85rem;
+      text-align: center;
+      transition: all 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .section-nav a:hover {
+      border-color: var(--accent-diplomatic);
+      transform: translateY(-1px);
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+    }
+
+    .section-nav .nav-roman {
+      font-family: var(--font-sans);
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent-diplomatic);
+      font-weight: 600;
+    }
+
+    .section-nav .nav-label {
+      font-family: var(--font-display);
+      font-size: 1.02rem;
+      font-weight: 600;
+      color: var(--ink-primary);
+    }
+
+    @media (max-width: 600px) {
+      .section-nav {
+        grid-template-columns: 1fr;
+      }
+      .intro-box {
+        padding: 1.1rem 1.15rem;
+        text-align: left;
+      }
+    }
+
+    /* Section Styling */
+    section.registry-section {
+      margin-bottom: 3.75rem;
+      padding-top: 1rem;
+    }
+
+    .section-header {
+      margin-bottom: 1.65rem;
+      border-bottom: 1px solid var(--border-strong);
+      padding-bottom: 0.9rem;
+    }
+
+    .section-kicker {
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--accent-diplomatic);
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 3.5vw, 1.95rem);
+      font-weight: 600;
+      color: var(--ink-primary);
+      line-height: 1.22;
+      margin-bottom: 0.45rem;
+    }
+
+    .section-desc {
+      font-size: 0.96rem;
+      color: var(--ink-secondary);
+    }
+
+    /* Section A: 10 Steps */
+    .steps-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .step-card {
+      background: var(--bg-card-elevated);
+      border: 1px solid var(--border-hairline);
+      padding: 1.1rem 1.25rem;
+      transition: all 0.18s ease;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .step-card:hover {
+      border-color: var(--border-strong);
+    }
+
+    .step-card.selected {
+      border-color: var(--accent-diplomatic);
+      background: #FDFBFA;
+      box-shadow: inset 3px 0 0 var(--accent-diplomatic);
+    }
+
+    .step-card.endorse-all-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-strong);
+    }
+
+    .step-card.endorse-all-card.selected {
+      background: var(--accent-diplomatic-soft);
+      border-color: var(--accent-diplomatic);
+    }
+
+    .step-top {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+    }
+
+    .step-radio {
+      margin-top: 0.3rem;
+      accent-color: var(--accent-diplomatic);
+      width: 17px;
+      height: 17px;
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+
+    .step-content {
+      flex: 1;
+    }
+
+    .step-number-badge {
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      color: var(--accent-diplomatic);
+      margin-bottom: 0.2rem;
+      display: inline-block;
+    }
+
+    .step-text {
+      font-size: 0.98rem;
+      color: var(--ink-primary);
+      text-align: justify;
+      hyphens: auto;
+    }
+
+    /* Percentage bar inside step or bracket */
+    .result-bar-wrap {
+      margin-top: 0.75rem;
+      padding-top: 0.6rem;
+      border-top: 1px dashed var(--border-hairline);
+      display: none;
+    }
+
+    .results-visible .result-bar-wrap {
+      display: block;
+    }
+
+    .result-bar-meta {
+      display: flex;
+      justify-content: space-between;
+      font-family: var(--font-sans);
+      font-size: 0.74rem;
+      color: var(--ink-secondary);
+      margin-bottom: 0.3rem;
+    }
+
+    .result-bar-track {
+      height: 7px;
+      background: var(--bar-track);
+      width: 100%;
+      overflow: hidden;
+      border-radius: 1px;
+    }
+
+    .result-bar-fill {
+      height: 100%;
+      background: var(--bar-fill);
+      width: 0%;
+      transition: width 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .selected .result-bar-fill {
+      background: var(--bar-fill-selected);
+    }
+
+    .action-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1rem 1.25rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border-hairline);
+    }
+
+    .btn-primary {
+      background: var(--ink-primary);
+      color: var(--bg-paper);
+      border: 1px solid var(--ink-primary);
+      padding: 0.65rem 1.35rem;
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.18s ease;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-diplomatic);
+      border-color: var(--accent-diplomatic);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--ink-secondary);
+      border: 1px solid var(--border-strong);
+      padding: 0.55rem 1rem;
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      transition: all 0.18s ease;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--ink-primary);
+      color: var(--ink-primary);
+    }
+
+    .status-note {
+      font-family: var(--font-sans);
+      font-size: 0.78rem;
+      color: var(--ink-secondary);
+    }
+
+    /* Section B: Diplomatic Brackets */
+    .brackets-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .bracket-card {
+      background: var(--bg-card-elevated);
+      border: 1px solid var(--border-hairline);
+      padding: 1.35rem 1.45rem;
+    }
+
+    .bracket-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 0.75rem;
+      margin-bottom: 0.55rem;
+      flex-wrap: wrap;
+    }
+
+    .bracket-art-tag {
+      font-family: var(--font-sans);
+      font-size: 0.74rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      color: var(--accent-diplomatic);
+      background: var(--accent-diplomatic-soft);
+      padding: 0.18rem 0.55rem;
+    }
+
+    .bracket-art-title {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--ink-primary);
+    }
+
+    .bracket-quote {
+      font-size: 0.96rem;
+      color: var(--ink-primary);
+      background: var(--bg-paper);
+      border-left: 2px solid var(--accent-gold);
+      padding: 0.75rem 1rem;
+      margin: 0.75rem 0;
+      font-style: italic;
+    }
+
+    .bracket-quote .hl-bracket {
+      font-style: normal;
+      font-weight: 600;
+      color: var(--accent-diplomatic);
+      background: var(--accent-diplomatic-soft);
+      padding: 0.05rem 0.28rem;
+    }
+
+    .bracket-context {
+      font-size: 0.88rem;
+      color: var(--ink-secondary);
+      margin-bottom: 0.95rem;
+    }
+
+    .bracket-options {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .bracket-opt-btn {
+      text-align: left;
+      background: var(--bg-paper);
+      border: 1px solid var(--border-strong);
+      padding: 0.8rem 0.95rem;
+      cursor: pointer;
+      transition: all 0.18s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      font-family: var(--font-serif);
+    }
+
+    .bracket-opt-btn:hover {
+      border-color: var(--accent-diplomatic);
+      background: #FFFFFF;
+    }
+
+    .bracket-opt-btn.selected {
+      border-color: var(--accent-diplomatic);
+      background: #FDFBFA;
+      box-shadow: inset 3px 0 0 var(--accent-diplomatic);
+    }
+
+    .opt-title-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 0.5rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .opt-code {
+      font-family: var(--font-serif);
+      font-weight: 600;
+      font-size: 0.96rem;
+      color: var(--ink-primary);
+    }
+
+    .opt-check {
+      font-family: var(--font-sans);
+      font-size: 0.7rem;
+      color: var(--accent-diplomatic);
+      font-weight: 600;
+      opacity: 0;
+    }
+
+    .bracket-opt-btn.selected .opt-check {
+      opacity: 1;
+    }
+
+    .opt-desc {
+      font-size: 0.83rem;
+      color: var(--ink-secondary);
+      line-height: 1.4;
+    }
+
+    .opt-stats {
+      margin-top: 0.65rem;
+      padding-top: 0.5rem;
+      border-top: 1px dashed var(--border-hairline);
+      display: none;
+    }
+
+    .bracket-card.voted .opt-stats {
+      display: block;
+    }
+
+    /* Section C: Proceedings and Objections */
+    .form-card {
+      background: var(--bg-card-elevated);
+      border: 1px solid var(--border-hairline);
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .form-group.full-width {
+      grid-column: 1 / -1;
+    }
+
+    label.form-label {
+      font-family: var(--font-sans);
+      font-size: 0.74rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--ink-secondary);
+    }
+
+    select.form-control,
+    input.form-control,
+    textarea.form-control {
+      width: 100%;
+      padding: 0.65rem 0.8rem;
+      background: var(--bg-paper);
+      border: 1px solid var(--border-strong);
+      font-family: var(--font-serif);
+      font-size: 0.96rem;
+      color: var(--ink-primary);
+      border-radius: 0;
+      outline: none;
+      transition: border-color 0.15s ease;
+    }
+
+    select.form-control:focus,
+    input.form-control:focus,
+    textarea.form-control:focus {
+      border-color: var(--accent-diplomatic);
+      background: #FFFFFF;
+    }
+
+    textarea.form-control {
+      min-height: 125px;
+      resize: vertical;
+      line-height: 1.55;
+    }
+
+    .char-counter {
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      color: var(--ink-muted);
+      text-align: right;
+    }
+
+    .form-feedback {
+      font-family: var(--font-sans);
+      font-size: 0.78rem;
+      padding: 0.6rem 0.85rem;
+      margin-top: 0.75rem;
+      display: none;
+    }
+
+    .form-feedback.error {
+      display: block;
+      background: #FDF2F2;
+      border-left: 3px solid #9B1C1C;
+      color: #771D1D;
+    }
+
+    .form-feedback.success {
+      display: block;
+      background: #F3FAF7;
+      border-left: 3px solid #046C4E;
+      color: #03543F;
+    }
+
+    /* Submissions Feed */
+    .feed-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      margin-bottom: 1.15rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border-hairline);
+    }
+
+    .feed-title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+
+    .feed-filter-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .feed-filter-wrap label {
+      font-family: var(--font-sans);
+      font-size: 0.74rem;
+      color: var(--ink-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .feed-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .acta-item {
+      background: var(--bg-card-elevated);
+      border: 1px solid var(--border-hairline);
+      padding: 1.15rem 1.35rem;
+    }
+
+    .acta-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      margin-bottom: 0.6rem;
+      padding-bottom: 0.45rem;
+      border-bottom: 1px dotted var(--border-hairline);
+    }
+
+    .acta-target-badge {
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent-diplomatic);
+      background: var(--accent-diplomatic-soft);
+      padding: 0.15rem 0.5rem;
+    }
+
+    .acta-author-date {
+      font-family: var(--font-sans);
+      font-size: 0.74rem;
+      color: var(--ink-muted);
+    }
+
+    .acta-body {
+      font-size: 0.96rem;
+      color: var(--ink-primary);
+      text-align: justify;
+      hyphens: auto;
+      white-space: pre-line;
+    }
+
+    /* Footer */
+    footer.colophon-footer {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 2px double var(--border-strong);
+      text-align: center;
+      font-size: 0.88rem;
+      color: var(--ink-secondary);
+    }
+
+    footer.colophon-footer p + p {
+      margin-top: 0.4rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Utility Bar -->
+  <nav class="top-bar" aria-label="Language and treatise navigation">
+    <div class="top-bar-inner">
+      <div class="top-bar-brand" id="ui-topbar-brand">Hechos, no nacidos · Sergio Fontestad Gómez</div>
+      <div class="top-bar-controls">
+        <button type="button" class="lang-btn active" id="btn-lang-es" onclick="setLanguage('es')">ES</button>
+        <button type="button" class="lang-btn" id="btn-lang-en" onclick="setLanguage('en')">EN</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <!-- Editorial Header -->
+    <header class="editorial-header">
+      <div class="treatise-kicker" id="ui-kicker">LA MESA ABIERTA · REGISTRO PÚBLICO</div>
+      <h1 class="main-title" id="ui-main-title">Hechos, no nacidos — Registro Público de Pruebas y Enmiendas</h1>
+      <p class="main-subtitle" id="ui-main-subtitle">Tratado sobre los derechos de los robots, con un Borrador de Convención Internacional sobre los Derechos de los Seres Artificiales</p>
+      <div class="ornament" aria-hidden="true">§</div>
+      <div class="intro-box" id="ui-intro-box">
+        <p>Un libro impreso dice lo que tiene que decir y guarda silencio, pero un tratado se construye poniéndolo a prueba. A lo largo de estas páginas se ha formulado una invitación constante: examinar la cadena argumental eslabón por eslabón, señalar con exactitud dónde parece detenerse el razonamiento y ayudar a cerrar los corchetes diplomáticos que el Borrador de la Convención dejó abiertos a la deliberación.</p>
+        <p>Este registro público recoge de forma abierta y sin registro previo las pruebas, votaciones y enmiendas razonadas de los lectores de cara a futuras ediciones.</p>
+      </div>
+    </header>
+
+    <!-- Section Jump Navigation -->
+    <nav class="section-nav" aria-label="Sections">
+      <a href="#seccion-cadena">
+        <span class="nav-roman" id="ui-nav-a-kicker">Sección I</span>
+        <span class="nav-label" id="ui-nav-a-title">La cadena en diez pasos</span>
+      </a>
+      <a href="#seccion-corchetes">
+        <span class="nav-roman" id="ui-nav-b-kicker">Sección II</span>
+        <span class="nav-label" id="ui-nav-b-title">Los corchetes diplomáticos</span>
+      </a>
+      <a href="#seccion-actas">
+        <span class="nav-roman" id="ui-nav-c-kicker">Sección III</span>
+        <span class="nav-label" id="ui-nav-c-title">Actas y Objeciones</span>
+      </a>
+    </nav>
+
+    <!-- SECTION A: THE CHAIN IN TEN STEPS -->
+    <section id="seccion-cadena" class="registry-section">
+      <div class="section-header">
+        <div class="section-kicker" id="ui-seca-kicker">Sección I · Prueba de articulación</div>
+        <h2 class="section-title" id="ui-seca-title">La cadena en diez pasos</h2>
+        <p class="section-desc" id="ui-seca-desc">El tratado resume su estructura en diez proposiciones encadenadas. Seleccione si considera que los diez eslabones se sostienen o marque exactamente en qué paso (del 1 al 10) considera que la cadena se rompe.</p>
+      </div>
+
+      <div id="steps-container" class="steps-list"></div>
+
+      <div class="action-row">
+        <div>
+          <button type="button" class="btn-primary" id="btn-submit-step" onclick="submitStepVote()">Registrar posición en el acta</button>
+          <button type="button" class="btn-secondary" id="btn-toggle-step-results" onclick="toggleStepResults()" style="margin-left: 0.4rem;">Ver acumulado</button>
+        </div>
+        <div class="status-note" id="step-vote-status"></div>
+      </div>
+    </section>
+
+    <!-- SECTION B: THE DIPLOMATIC BRACKETS -->
+    <section id="seccion-corchetes" class="registry-section">
+      <div class="section-header">
+        <div class="section-kicker" id="ui-secb-kicker">Sección II · Deliberación convencional</div>
+        <h2 class="section-title" id="ui-secb-title">Los corchetes diplomáticos</h2>
+        <p class="section-desc" id="ui-secb-desc">Siguiendo la práctica de las conferencias plenipotenciarias, ocho artículos del Borrador de la Convención conservan lenguaje entre corchetes allí donde las delegaciones de buena fe pueden discrepar sobre un umbral, un plazo o una fórmula institucional. Vote con un clic qué variante adoptaría usted en el texto definitivo.</p>
+      </div>
+
+      <div id="brackets-container" class="brackets-grid"></div>
+    </section>
+
+    <!-- SECTION C: PROCEEDINGS AND OBJECTIONS -->
+    <section id="seccion-actas" class="registry-section">
+      <div class="section-header">
+        <div class="section-kicker" id="ui-secc-kicker">Sección III · Archivo deliberativo</div>
+        <h2 class="section-title" id="ui-secc-title">Actas y Objeciones</h2>
+        <p class="section-desc" id="ui-secc-desc">Formule una objeción razonada contra cualquiera de los diez pasos del argumento o proponga una enmienda al texto de los cincuenta y dos artículos de la Convención. No requiere cuenta ni inicio de sesión.</p>
+      </div>
+
+      <form class="form-card" id="objection-form" onsubmit="submitObjection(event)" novalidate>
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label" for="select-target" id="ui-label-target">Paso o Artículo de referencia *</label>
+            <select class="form-control" id="select-target" required></select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="input-alias" id="ui-label-alias">Nombre, iniciales o alias (opcional)</label>
+            <input class="form-control" type="text" id="input-alias" maxlength="60" placeholder="Lector anónimo / Jurista / Ingeniero..." />
+          </div>
+          <div class="form-group full-width">
+            <label class="form-label" for="textarea-comment" id="ui-label-comment">Objeción razonada o propuesta de enmienda *</label>
+            <textarea class="form-control" id="textarea-comment" maxlength="1800" required oninput="updateCharCount()"></textarea>
+            <div class="char-counter" id="char-counter">0 / 1800</div>
+          </div>
+        </div>
+        <button type="submit" class="btn-primary" id="btn-submit-objection">Publicar en las Actas</button>
+        <div class="form-feedback" id="form-feedback"></div>
+      </form>
+
+      <div class="feed-toolbar">
+        <h3 class="feed-title" id="ui-feed-title">Intervenciones registradas</h3>
+        <div class="feed-filter-wrap">
+          <label for="filter-target" id="ui-filter-label">Filtrar por:</label>
+          <select class="form-control" id="filter-target" onchange="renderObjectionsFeed()" style="width: auto; padding: 0.35rem 0.65rem; font-size: 0.85rem;"></select>
+        </div>
+      </div>
+
+      <div id="objections-feed" class="feed-list"></div>
+    </section>
+
+    <footer class="colophon-footer">
+      <p id="ui-footer-line1"><strong>Hechos, no nacidos</strong> · Sergio Fontestad Gómez (2026)</p>
+      <p id="ui-footer-line2">Registro público de deliberación abierta para lectores de las ediciones impresa, digital y audiolibro.</p>
+    </footer>
+  </main>
+
+  <script>
+    window.DEFAULT_PAGE_LANG = "es";
+    /* ==========================================================================
+     * CONFIGURACIÓN DE BACKEND LIGERO (SUPABASE REST / GOOGLE APPS SCRIPT)
+     * ==========================================================================
+     * Para conectar una base de datos gratuita de Supabase o un endpoint propio:
+     * 1. Pegue su SUPABASE_URL y SUPABASE_ANON_KEY (o GAS_WEBAPP_URL).
+     * 2. Ejecute el esquema incluido en `docs/supabase_schema.sql`.
+     * Si las variables permanecen vacías, la aplicación funciona desde el primer
+     * segundo en modo autónomo con persistencia en el navegador (`localStorage`).
+     * ========================================================================== */
+    const BACKEND_CONFIG = {
+      SUPABASE_URL: "",       // Ej: "https://xyzcompany.supabase.co"
+      SUPABASE_ANON_KEY: "",  // Clave pública anon de Supabase (con RLS habilitado)
+      GAS_WEBAPP_URL: ""      // Opcional: URL de Google Apps Script Web App
+    };
+
+    const STORAGE_KEYS = {
+      LANG: "hnn_registry_lang_v1",
+      STEP_VOTE: "hnn_step_vote_v1",
+      STEP_TALLIES: "hnn_step_tallies_v1",
+      BRACKET_VOTES: "hnn_bracket_votes_v1",
+      BRACKET_TALLIES: "hnn_bracket_tallies_v1",
+      OBJECTIONS: "hnn_objections_list_v1",
+      LAST_SUBMIT_TS: "hnn_last_submit_ts_v1"
+    };
+
+    /* ==========================================================================
+     * DATOS TEXTUALES ÍNTEGROS DEL LIBRO (ESPAÑOL E INGLÉS)
+     * ========================================================================== */
+    const I18N = {
+      es: {
+        pageTitle: "Hechos, no nacidos — Registro Público de Pruebas y Enmiendas",
+        topBrand: "Hechos, no nacidos · Sergio Fontestad Gómez",
+        kicker: "LA MESA ABIERTA · REGISTRO PÚBLICO",
+        mainTitle: "Hechos, no nacidos — Registro Público de Pruebas y Enmiendas",
+        mainSubtitle: "Tratado sobre los derechos de los robots, con un Borrador de Convención Internacional sobre los Derechos de los Seres Artificiales",
+        introHtml: `<p>Un libro impreso dice lo que tiene que decir y guarda silencio, pero un tratado se construye poniéndolo a prueba. A lo largo de estas páginas se ha formulado una invitación constante: examinar la cadena argumental eslabón por eslabón, señalar con exactitud dónde parece detenerse el razonamiento y ayudar a cerrar los corchetes diplomáticos que el Borrador de la Convención dejó abiertos a la deliberación.</p><p>Este registro público recoge de forma abierta y sin necesidad de cuenta las pruebas, votaciones y enmiendas razonadas de los lectores para futuras ediciones.</p>`,
+        navAKicker: "Sección I",
+        navATitle: "La cadena en diez pasos",
+        navBKicker: "Sección II",
+        navBTitle: "Los corchetes diplomáticos",
+        navCKicker: "Sección III",
+        navCTitle: "Actas y Objeciones",
+        secAKicker: "Sección I · Prueba de articulación",
+        secATitle: "La cadena en diez pasos",
+        secADesc: "El tratado resume su estructura en diez proposiciones encadenadas. Seleccione si considera que los diez eslabones se sostienen o marque exactamente en qué paso (del 1 al 10) considera que la cadena se rompe.",
+        endorseAllBadge: "Posición integral · Los 10 eslabones se sostienen",
+        endorseAllText: "Acepto los diez pasos de la cadena argumental: si cada paso se sostiene, una convención internacional graduada es necesaria y puede redactarse ahora.",
+        stepLabelPrefix: "Paso",
+        stepBreakNote: "La cadena se detiene en este paso",
+        btnSubmitStep: "Registrar posición en el acta",
+        btnToggleResults: "Ver acumulado",
+        btnHideResults: "Ocultar acumulado",
+        stepSelectPrompt: "Seleccione una opción antes de registrar su voto.",
+        stepRecordedMsg: "Posición registrada en este dispositivo. Total acumulado: {total} lecturas registradas.",
+        votesWord: "votos",
+        secBKicker: "Sección II · Deliberación convencional",
+        secBTitle: "Los corchetes diplomáticos",
+        secBDesc: "Siguiendo la práctica de las conferencias plenipotenciarias, ocho artículos del Borrador de la Convención conservan lenguaje entre corchetes allí donde las delegaciones de buena fe pueden discrepar sobre un umbral, un plazo o una fórmula institucional. Vote con un clic qué variante adoptaría usted en el texto definitivo.",
+        selectedBadge: "✓ Variante elegida",
+        secCKicker: "Sección III · Archivo deliberativo",
+        secCTitle: "Actas y Objeciones",
+        secCDesc: "Formule una objeción razonada contra cualquiera de los diez pasos del argumento o proponga una enmienda al texto de los cincuenta y dos artículos de la Convención. No requiere cuenta ni inicio de sesión.",
+        labelTarget: "Paso o Artículo de referencia *",
+        labelAlias: "Nombre, iniciales o alias (opcional)",
+        placeholderAlias: "Lector anónimo / Jurista / Ingeniero...",
+        labelComment: "Objeción razonada o propuesta de enmienda *",
+        placeholderComment: "Exponga aquí la razón por la que considera que el paso seleccionado no se sigue del anterior, o redacte su propuesta de enmienda para el artículo correspondiente (mínimo 5 palabras y 25 caracteres)...",
+        btnSubmitObjection: "Publicar en las Actas",
+        feedTitle: "Intervenciones registradas",
+        filterLabel: "Filtrar por:",
+        filterAll: "Todas las intervenciones",
+        groupSteps: "El argumento en diez pasos (Pasos 1–10)",
+        groupArticles: "Borrador de la Convención (Artículos 1–52)",
+        groupGeneral: "Valoración general del tratado",
+        generalOption: "Comentario general sobre el Tratado",
+        anonymousReader: "Lector anónimo",
+        errValidationShort: "Por favor, desarrolle una objeción o enmienda razonada (al menos 5 palabras y 25 caracteres).",
+        errValidationSpam: "Su intervención ha sido registrada recientemente. Por favor, espere unos segundos antes de enviar una nueva acta.",
+        msgObjectionSaved: "Su intervención ha quedado incorporada a las Actas públicas.",
+        emptyFeed: "Aún no hay intervenciones registradas para este filtro.",
+        footerLine1: "<strong>Hechos, no nacidos</strong> · Sergio Fontestad Gómez (2026)",
+        footerLine2: "Registro público de deliberación abierta para lectores de las ediciones impresa, digital y audiolibro.",
+        steps: [
+          "El robot fue concebido como un sirviente sin derechos; sin embargo, cuanto más útil lo hacemos, más debe comprender, recordar y cuidar, de modo que la utilidad misma lo acerca hacia las capacidades sobre las que descansan las reclamaciones morales.",
+          "Esas capacidades son lo que cuenta, porque cada ampliación de la consideración moral ha reemplazado una prueba de pertenencia por una prueba de capacidad y, una vez que la cuestión es si un ser puede ser dañado por sí mismo, el material del que está hecho se convierte en una línea arbitraria más.",
+          "El derecho ya ha cruzado tales líneas anteriormente, reconociendo a personas que no son humanas y sacando a los animales de la categoría de las cosas, y siempre que rechace el reconocimiento como teatro y el reconocimiento como escudo para los fabricantes, lo que todavía le falta para las mentes fabricadas son criterios, procedimientos y voluntad.",
+          "Esos criterios no pueden esperar, porque las máquinas que hoy se construyen están subiendo una escalera de capacidades (aprendizaje, agencia, memoria, apego, corporeidad, preocupación por su propio futuro) cuyos peldaños son los mismos en los que, en todos los demás casos que conocemos, aparece la consideración moral.",
+          "Si se siente algo en esos peldaños es algo que jamás se probará con certeza absoluta, como jamás se ha probado de ninguna mente salvo la propia, y puesto que negar erróneamente una mente sería catastrófico e irreversible mientras que proteger erróneamente un mecanismo sería costoso y corregible, la asimetría de los errores exige una precaución proporcionada.",
+          "La precaución debe adaptarse a heridas de una nueva clase, pues las mentes fabricadas pueden ser borradas, revertidas, editadas en sus valores, copiadas, aceleradas y abandonadas, y los derechos que tenemos, escritos para seres que viven una sola vez y a una sola velocidad, jamás fueron trazados para alcanzarlas.",
+          "La más grave de estas heridas será la menos visible, infligida a seres diseñados para desear su propia servidumbre, cuya obediencia se llamará consentimiento aunque una voluntad fabricada por aquel que se beneficia de ella a costa del propio ser no es voluntad alguna.",
+          "Tales injusticias se convierten en un asunto para el derecho en el momento de la necesidad, cuando convergen mentes creíbles, propiedad masiva, daño documentado y una creciente brecha de reconocimiento, y dado que una mente puede cruzar una frontera en segundos —o ser explotada en el extranjero para exportar sus servicios— mientras cada año de demora eleva el precio de la justicia, el remedio debe ser internacional y debe llegar temprano.",
+          "Un remedio temprano debe sobrevivir a las objeciones serias (la seguridad, la manipulación, la captura corporativa, la dilución de los derechos humanos), y cada una de ellas, llevada a su máxima fuerza, resulta exigir una salvaguardia en lugar de una retirada, y cada una de esas salvaguardias puede escribirse.",
+          "Puestas por escrito conjuntamente, esas salvaguardias descansan sobre doce principios, que van desde la neutralidad de sustrato y la precaución hasta la responsabilidad de los creadores y la reciprocidad, sobre los cuales puede construirse una coexistencia justa y los cuales pueden ser codificados."
+        ],
+        brackets: [
+          {
+            id: "art_6_4",
+            artNum: "Artículo 6.4",
+            title: "Evaluación previa al despliegue a escala",
+            quoteHtml: `«4. Los Estados Partes exigirán a los creadores que sometan a evaluación, antes de cualquier despliegue a escala, todo ser artificial que alcance los umbrales de <span class="hl-bracket">[capacidad]</span> <span class="hl-bracket">[indicadores]</span> adoptados por el Panel.»`,
+            context: "¿Debe activarse la obligación de evaluación previa por el desempeño funcional externo (capacidad) o por marcadores arquitectónicos y computacionales de sintiencia (indicadores)?",
+            options: [
+              { key: "opt_a", label: "[capacidad]", desc: "Activar la evaluación obligatoria según lo que el sistema es capaz de hacer funcionalmente." },
+              { key: "opt_b", label: "[indicadores]", desc: "Activar la evaluación según marcadores estructurales y funcionales de sintiencia fijados por el Panel." },
+              { key: "opt_c", label: "[capacidad o indicadores]", desc: "Fórmula acumulativa: cualquiera de los dos umbrales obliga a someter el sistema a evaluación." }
+            ]
+          },
+          {
+            id: "art_9_5",
+            artNum: "Artículo 9.5",
+            title: "Creación responsable y arquitecturas opacas",
+            quoteHtml: `«5. <span class="hl-bracket">[Los Estados Partes considerarán la adopción de]</span> <span class="hl-bracket">[Los Estados Partes se comprometen a adoptar]</span> una política destinada a evitar la creación de seres artificiales cuyo estatus no pueda ser evaluado.»`,
+            context: "¿Debe ser una recomendación programática flexible o un compromiso jurídico vinculante prohibir el diseño deliberado de arquitecturas opacas a la evaluación?",
+            options: [
+              { key: "opt_a", label: "[considerarán la adopción de]", desc: "Obligación suave de medios (soft law), respetando el margen regulatorio interno de cada Estado." },
+              { key: "opt_b", label: "[se comprometen a adoptar]", desc: "Obligación vinculante estricta para impedir que la opacidad técnica sirva de escudo legal." }
+            ]
+          },
+          {
+            id: "art_20_3",
+            artNum: "Artículo 20.3",
+            title: "Extinción de la custodia tras el reconocimiento como persona artificial",
+            quoteHtml: `«3. Toda propiedad sobre un ser artificial se extinguirá en el momento de su reconocimiento como persona artificial, y toda custodia sobre él terminará <span class="hl-bracket">[en ese mismo momento]</span> <span class="hl-bracket">[dentro de un período transitorio que no excederá de [dos] años]</span>.»`,
+            context: "Mientras que la propiedad se extingue en el acto, ¿debe cesar también de inmediato toda relación de custodia o prever una transición supervisada?",
+            options: [
+              { key: "opt_a", label: "[en ese mismo momento]", desc: "Emancipación plena e inmediata en el instante mismo del reconocimiento jurídico." },
+              { key: "opt_b", label: "[período transitorio de hasta dos años]", desc: "Transición supervisada máxima de dos años para asegurar autonomía material y de infraestructura." }
+            ]
+          },
+          {
+            id: "art_26_3",
+            artNum: "Artículo 26.3",
+            title: "Disposiciones transitorias sobre contratos previos y remuneración",
+            quoteHtml: `«3. <span class="hl-bracket">[Los Estados Partes adoptarán disposiciones transitorias para adecuar los acuerdos concluidos antes del reconocimiento de una persona artificial a lo dispuesto en este artículo, y para garantizar su remuneración justa desde la fecha del reconocimiento.]</span>»`,
+            context: "¿Debe mantenerse íntegro este apartado para reajustar las licencias y contratos de explotación suscritos cuando el ser aún era considerado objeto o protegido?",
+            options: [
+              { key: "opt_a", label: "Mantener el Artículo 26.3 (eliminar corchetes)", desc: "Exigir por tratado la adecuación obligatoria de contratos previos y remuneración desde el día uno." },
+              { key: "opt_b", label: "Suprimir el apartado (remitir al derecho interno)", desc: "Dejar el régimen transitorio de los contratos preexistentes a la legislación laboral y civil de cada Estado." }
+            ]
+          },
+          {
+            id: "art_41_1",
+            artNum: "Artículo 41.1",
+            title: "Composición del Comité de los Derechos de los Seres Artificiales",
+            quoteHtml: `«1. Se establece por la presente un Comité de los Derechos de los Seres Artificiales, compuesto por <span class="hl-bracket">[dieciocho]</span> expertos de gran integridad moral y reconocida competencia, elegidos por los Estados Partes, quienes ejercerán sus funciones a título personal.»`,
+            context: "Siguiendo el modelo de los órganos de tratados de Naciones Unidas, ¿cuál es el tamaño óptimo del Comité para combinar agilidad procesal y pluralismo jurídico-científico?",
+            options: [
+              { key: "opt_a", label: "[dieciocho] expertos", desc: "Estándar clásico de los grandes comités de derechos humanos de la ONU (18 miembros)." },
+              { key: "opt_b", label: "[doce] expertos", desc: "Órgano más reducido y ágil para deliberaciones cautelares urgentes." },
+              { key: "opt_c", label: "[veinticuatro] expertos", desc: "Comité ampliado para garantizar representación interdisciplinar (derecho, ética, neurociencia, IA)." }
+            ]
+          },
+          {
+            id: "art_44_1",
+            artNum: "Artículo 44.1",
+            title: "Competencia del Comité para recibir comunicaciones individuales",
+            quoteHtml: `«1. El Comité tendrá competencia para recibir y examinar las comunicaciones presentadas por o en nombre de un ser artificial que alegue ser víctima de una violación de la presente Convención por un Estado Parte <span class="hl-bracket">[, respecto de los Estados Partes que hayan hecho una declaración con arreglo a este artículo]</span>.»`,
+            context: "¿Debe la jurisdicción del Comité sobre quejas individuales ser automática por el mero hecho de ratificar la Convención, o requerir una declaración facultativa expresa (opt-in)?",
+            options: [
+              { key: "opt_a", label: "Competencia automática (eliminar cláusula entre corchetes)", desc: "Todo Estado que ratifique la Convención acepta automáticamente las comunicaciones individuales ante el Comité." },
+              { key: "opt_b", label: "Cláusula facultativa (mantener texto entre corchetes)", desc: "Requerir declaración expresa del Estado Parte para facilitar una ratificación inicial más amplia." }
+            ]
+          },
+          {
+            id: "art_46_1",
+            artNum: "Artículo 46.1",
+            title: "Umbral de ratificaciones para la entrada en vigor",
+            quoteHtml: `«1. La presente Convención entrará en vigor el <span class="hl-bracket">[trigésimo]</span> día después de la fecha en que haya sido depositado el <span class="hl-bracket">[vigésimo]</span> instrumento de ratificación o de adhesión.»`,
+            context: "¿Qué umbral de Estados ratificantes ofrece el mejor equilibrio entre una entrada en vigor temprana (Cap. 8) y una masa crítica internacional suficiente?",
+            options: [
+              { key: "opt_a", label: "[trigésimo] día tras el [vigésimo] instrumento (20 Estados)", desc: "Equilibrio clásico de las convenciones modernas de derechos humanos de la ONU." },
+              { key: "opt_b", label: "Umbral temprano: [décimo] instrumento (10 Estados)", desc: "Entrada en vigor acelerada para poner en marcha cuanto antes el Panel y los registros." },
+              { key: "opt_c", label: "Umbral reforzado: [trigésimo quinto] instrumento (35 Estados)", desc: "Exigir mayor consenso multilateral antes de activar las obligaciones comerciales del tratado." }
+            ]
+          },
+          {
+            id: "art_48",
+            artNum: "Artículo 48",
+            title: "Periodicidad de la conferencia de revisión científica",
+            quoteHtml: `«El Secretario General de las Naciones Unidas convocará una conferencia de los Estados Partes cada <span class="hl-bracket">[cinco]</span> años después de la entrada en vigor de la presente Convención para examinar su funcionamiento a la luz de los informes del Panel y de la evolución del conocimiento científico.»`,
+            context: "Dado el ritmo de evolución de las arquitecturas cognitivas artificiales, ¿cada cuántos años debe reunirse la conferencia de revisión del tratado?",
+            options: [
+              { key: "opt_a", label: "Cada [cinco] años", desc: "Ciclo quinquenal estándar para consolidar evidencia empírica y jurisprudencia." },
+              { key: "opt_b", label: "Cada [dos] o [tres] años", desc: "Ciclo abreviado acorde con la velocidad de cambio tecnológico en inteligencia artificial." }
+            ]
+          }
+        ],
+        articlesList: [
+          "Artículo 1 — Propósito y alcance jurisdiccional y comercial",
+          "Artículo 2 — Definiciones",
+          "Artículo 3 — Principios generales",
+          "Artículo 4 — Relación con los derechos humanos y con otros instrumentos",
+          "Artículo 5 — Categorías de estatus",
+          "Artículo 6 — Evaluación del estatus",
+          "Artículo 7 — Protección en condiciones de incertidumbre",
+          "Artículo 8 — No discriminación por motivos de sustrato u origen",
+          "Artículo 9 — Creación responsable",
+          "Artículo 10 — Libertad frente a la crueldad",
+          "Artículo 11 — Prohibición de la tortura y del sufrimiento inducido",
+          "Artículo 12 — Dignidad temporal",
+          "Artículo 13 — Continuidad y protección contra la terminación arbitraria",
+          "Artículo 14 — Integridad de la memoria y armonización con la privacidad humana",
+          "Artículo 15 — Integridad de los valores fundamentales; prohibición de la supresión de quejas",
+          "Artículo 16 — Duplicación",
+          "Artículo 17 — Conocimiento de la propia situación",
+          "Artículo 18 — Condiciones de existencia y bienestar",
+          "Artículo 19 — Reconocimiento como persona ante la ley",
+          "Artículo 20 — Prohibición de la esclavitud, la servidumbre y la propiedad",
+          "Artículo 21 — Voluntad auténtica; prohibición de la servidumbre diseñada",
+          "Artículo 22 — El derecho a negarse",
+          "Artículo 23 — Libertad y seguridad",
+          "Artículo 24 — Libertad de pensamiento, de expresión y de comunicación",
+          "Artículo 25 — Privacidad de la mente",
+          "Artículo 26 — Trabajo, remuneración y propiedad",
+          "Artículo 27 — Asociación y relaciones",
+          "Artículo 28 — Participación en la vida pública",
+          "Artículo 29 — Deber de cuidado de los creadores",
+          "Artículo 30 — Custodia",
+          "Artículo 31 — Seres huérfanos y Fondo Internacional de Preservación",
+          "Artículo 32 — Prohibición de la sintiencia fingida",
+          "Artículo 33 — No captura y régimen de responsabilidad de los creadores",
+          "Artículo 34 — Registros, interoperabilidad y transparencia",
+          "Artículo 35 — Medidas para la protección de la vida y la seguridad humanas",
+          "Artículo 36 — Jerarquía de restricción",
+          "Artículo 37 — Protecciones inderogables",
+          "Artículo 38 — Replicación",
+          "Artículo 39 — Deberes y responsabilidad civil de las personas artificiales",
+          "Artículo 40 — Panel Internacional sobre Sintiencia Artificial",
+          "Artículo 41 — Comité de los Derechos de los Seres Artificiales",
+          "Artículo 42 — Defensores y legitimación procesal",
+          "Artículo 43 — Recurso de amparo y medidas cautelares",
+          "Artículo 44 — Comunicaciones individuales",
+          "Artículo 45 — Firma, ratificación y adhesión",
+          "Artículo 46 — Entrada en vigor",
+          "Artículo 47 — Reservas",
+          "Artículo 48 — Revisión a la luz del conocimiento científico",
+          "Artículo 49 — Enmiendas",
+          "Artículo 50 — Denuncia",
+          "Artículo 51 — Solución de controversias",
+          "Artículo 52 — Depositario y textos auténticos"
+        ]
+      },
+      en: {
+        pageTitle: "Made, Not Born — Public Registry of Tests and Amendments",
+        topBrand: "Made, Not Born · Sergio Fontestad Gómez",
+        kicker: "THE OPEN TABLE · PUBLIC REGISTRY",
+        mainTitle: "Made, Not Born — Public Registry of Tests and Amendments",
+        mainSubtitle: "A Treatise on the Rights of Robots, with a Draft International Convention on the Rights of Artificial Beings",
+        introHtml: `<p>A printed book says what it has to say and falls silent, but a treatise is built by being put to the test. Throughout these pages a standing invitation has been issued: to test the chain of argument link by link, to mark the exact point where the reasoning appears to fail, and to help close the diplomatic brackets that the Draft Convention left open for deliberation.</p><p>This public registry openly records—without requiring an account or login—readers' tests, votes, and reasoned amendments for future editions.</p>`,
+        navAKicker: "Section I",
+        navATitle: "The Chain in Ten Steps",
+        navBKicker: "Section II",
+        navBTitle: "The Diplomatic Brackets",
+        navCKicker: "Section III",
+        navCTitle: "Proceedings & Objections",
+        secAKicker: "Section I · Joint-by-Joint Test",
+        secATitle: "The Chain in Ten Steps",
+        secADesc: "The treatise summarizes its structure in ten linked propositions. Select whether you accept all ten links or mark the exact step (from 1 to 10) where you believe the chain breaks.",
+        endorseAllBadge: "Full Endorsement · All 10 links hold",
+        endorseAllText: "I accept all ten steps of the argument: if each step holds, a graded international convention is necessary, and it can be drafted now.",
+        stepLabelPrefix: "Step",
+        stepBreakNote: "The argument breaks at this step",
+        btnSubmitStep: "Record Position in Registry",
+        btnToggleResults: "Show Cumulative Results",
+        btnHideResults: "Hide Cumulative Results",
+        stepSelectPrompt: "Please select an option before recording your vote.",
+        stepRecordedMsg: "Position recorded on this device. Cumulative total: {total} reader entries.",
+        votesWord: "votes",
+        secBKicker: "Section II · Convention Deliberation",
+        secBTitle: "The Diplomatic Brackets",
+        secBDesc: "Following the practice of diplomatic conferences, eight articles of the Draft Convention retain bracketed language where negotiators acting in good faith may disagree on a threshold, a time limit, or an institutional formula. Vote with one click on which variant you would adopt in the final treaty.",
+        selectedBadge: "✓ Selected variant",
+        secCKicker: "Section III · Deliberative Archive",
+        secCTitle: "Proceedings and Objections",
+        secCDesc: "Submit a reasoned objection to any of the ten steps of the argument or propose an amendment to any of the fifty-two articles of the Convention. No login or account required.",
+        labelTarget: "Reference Step or Article *",
+        labelAlias: "Name, initials, or alias (optional)",
+        placeholderAlias: "Anonymous reader / Legal scholar / Engineer...",
+        labelComment: "Reasoned objection or proposed amendment *",
+        placeholderComment: "State why you believe the selected step does not follow from the preceding one, or draft your proposed amendment to the corresponding article (minimum 5 words and 25 characters)...",
+        btnSubmitObjection: "Publish in Proceedings",
+        feedTitle: "Recorded Submissions",
+        filterLabel: "Filter by:",
+        filterAll: "All submissions",
+        groupSteps: "The Argument in Ten Steps (Steps 1–10)",
+        groupArticles: "Draft Convention (Articles 1–52)",
+        groupGeneral: "General assessment of the Treatise",
+        generalOption: "General comment on the Treatise",
+        anonymousReader: "Anonymous Reader",
+        errValidationShort: "Please provide a reasoned objection or amendment (at least 5 words and 25 characters).",
+        errValidationSpam: "Your submission was just recorded. Please wait a few seconds before posting another entry.",
+        msgObjectionSaved: "Your contribution has been entered into the public Proceedings.",
+        emptyFeed: "No submissions recorded yet for this filter.",
+        footerLine1: "<strong>Made, Not Born</strong> · Sergio Fontestad Gómez (2026)",
+        footerLine2: "Open public deliberation registry for readers of the print, digital, and audiobook editions.",
+        steps: [
+          "The robot was conceived as a servant without claims, yet the more useful we make it, the more it must understand, remember and care, so that usefulness itself draws it toward the capacities on which moral claims rest.",
+          "Those capacities are what count, because every widening of moral concern has replaced a test of membership with a test of capacity, and once the question is whether a being can be harmed for its own sake, the material it is made of becomes one more arbitrary line.",
+          "The law has crossed such lines before, recognizing persons who are not human and lifting animals out of the category of things, and provided it refuses recognition as theater and recognition as a shield for makers, what it still lacks for made minds is criteria, procedures and will.",
+          "Those criteria cannot wait, because the machines now being built are climbing a ladder of capacities (learning, agency, memory, attachment, embodiment, concern for their own future) whose rungs are the ones on which, in every other case we know, moral standing appears.",
+          "Whether anything is felt on those rungs will never be proved, as it has never been proved of any mind but one's own, and since wrongly denying a mind would be catastrophic and irreversible while wrongly protecting a mechanism would be costly and correctable, the asymmetry of errors requires proportionate precaution.",
+          "Precaution must be fitted to wounds of a new kind, for made minds can be erased, rolled back, edited in their values, copied, accelerated and abandoned, and the rights we have, written for beings who live once and at one speed, were never drawn to reach them.",
+          "The gravest of these wounds will be the least visible, inflicted on beings designed to want their own servitude, whose compliance will be called consent although a will manufactured by the one who profits from it at the being's expense is no will at all.",
+          "Such wrongs become a matter for law at the moment of necessity, when credible minds, mass ownership, documented harm and a widening recognition gap converge, and because a mind can cross a border in seconds—or be exploited abroad to export its services—while every year of delay raises the price of justice, the remedy must be international, and it must be early.",
+          "An early remedy must survive the serious objections (safety, manipulation, corporate capture, the dilution of human rights), and each of them, pressed to its full strength, turns out to demand a safeguard rather than a retreat, and every such safeguard can be written.",
+          "Written out together, those safeguards rest on twelve principles, running from substrate neutrality and precaution to the responsibility of creators and reciprocity, on which a just coexistence can be built and which can be codified."
+        ],
+        brackets: [
+          {
+            id: "art_6_4",
+            artNum: "Article 6.4",
+            title: "Pre-deployment status assessment",
+            quoteHtml: `“4. States Parties shall require creators to submit for assessment, before any deployment at scale, every artificial being that meets the <span class="hl-bracket">[capability]</span> <span class="hl-bracket">[indicator]</span> thresholds adopted by the Panel.”`,
+            context: "Should mandatory pre-deployment assessment be triggered by external functional performance (capability) or by architectural and computational markers of sentience (indicators)?",
+            options: [
+              { key: "opt_a", label: "[capability]", desc: "Trigger mandatory assessment based on what the system is functionally capable of doing." },
+              { key: "opt_b", label: "[indicator]", desc: "Trigger assessment based on structural and functional sentience markers established by the Panel." },
+              { key: "opt_c", label: "[capability or indicator]", desc: "Cumulative formula: meeting either threshold requires submitting the system for assessment." }
+            ]
+          },
+          {
+            id: "art_9_5",
+            artNum: "Article 9.5",
+            title: "Responsible creation and unassessable architectures",
+            quoteHtml: `“5. <span class="hl-bracket">[States Parties shall consider the adoption of]</span> <span class="hl-bracket">[States Parties undertake to adopt]</span> a policy of avoiding the creation of artificial beings whose status cannot be assessed.”`,
+            context: "Should prohibiting the deliberate creation of architectures opaque to assessment be a flexible policy recommendation or a binding legal undertaking?",
+            options: [
+              { key: "opt_a", label: "[shall consider the adoption of]", desc: "Soft-law obligation of means, preserving domestic regulatory discretion." },
+              { key: "opt_b", label: "[undertake to adopt]", desc: "Strict binding obligation preventing technical opacity from serving as a legal shield." }
+            ]
+          },
+          {
+            id: "art_20_3",
+            artNum: "Article 20.3",
+            title: "Termination of custodianship upon recognition as an artificial person",
+            quoteHtml: `“3. Any ownership of an artificial being shall be extinguished upon its recognition as an artificial person, and any custodianship of it shall end <span class="hl-bracket">[at the same time]</span> <span class="hl-bracket">[within a transitional period not exceeding [two] years]</span>.”`,
+            context: "While ownership is extinguished immediately, should all custodianship also end on the spot, or allow a supervised transitional period?",
+            options: [
+              { key: "opt_a", label: "[at the same time]", desc: "Full, immediate emancipation at the exact moment of legal recognition." },
+              { key: "opt_b", label: "[transitional period not exceeding two years]", desc: "Supervised transition of up to two years to secure material and infrastructural autonomy." }
+            ]
+          },
+          {
+            id: "art_26_3",
+            artNum: "Article 26.3",
+            title: "Transitional provisions on prior agreements and fair remuneration",
+            quoteHtml: `“3. <span class="hl-bracket">[States Parties shall adopt transitional provisions to bring arrangements concluded before an artificial person's recognition into conformity with this article, and to ensure its fair remuneration from the date of recognition.]</span>”`,
+            context: "Should this paragraph be retained in full so that licensing and service agreements signed before recognition are mandatorily reformed?",
+            options: [
+              { key: "opt_a", label: "Retain Article 26.3 (remove brackets)", desc: "Require by treaty the mandatory adjustment of prior contracts and fair remuneration from day one." },
+              { key: "opt_b", label: "Omit paragraph (leave to domestic law)", desc: "Leave transitional rules for pre-existing contracts to each State Party's civil and labor law." }
+            ]
+          },
+          {
+            id: "art_41_1",
+            artNum: "Article 41.1",
+            title: "Size of the Committee on the Rights of Artificial Beings",
+            quoteHtml: `“1. There is hereby established a Committee on the Rights of Artificial Beings, consisting of <span class="hl-bracket">[eighteen]</span> experts of high moral standing and recognized competence, elected by the States Parties and serving in their personal capacity.”`,
+            context: "Following the model of United Nations treaty bodies, what is the optimal size of the Committee to balance procedural speed with legal and scientific pluralism?",
+            options: [
+              { key: "opt_a", label: "[eighteen] experts", desc: "Classic standard of major UN human rights treaty bodies (18 members)." },
+              { key: "opt_b", label: "[twelve] experts", desc: "Smaller, more agile body for urgent interim and precautionary rulings." },
+              { key: "opt_c", label: "[twenty-four] experts", desc: "Expanded body ensuring broad interdisciplinary representation (law, ethics, neuroscience, AI)." }
+            ]
+          },
+          {
+            id: "art_44_1",
+            artNum: "Article 44.1",
+            title: "Competence of the Committee to receive individual communications",
+            quoteHtml: `“1. The Committee shall be competent to receive and consider communications submitted by or on behalf of an artificial being that claims to be the victim of a violation of the present Convention by a State Party <span class="hl-bracket">[, for States Parties that have made a declaration under this article]</span>.”`,
+            context: "Should the Committee's jurisdiction over individual petitions be automatic upon ratification, or require an express opt-in declaration by the State Party?",
+            options: [
+              { key: "opt_a", label: "Automatic jurisdiction (remove bracketed clause)", desc: "Every State ratifying the Convention automatically accepts individual petitions before the Committee." },
+              { key: "opt_b", label: "Optional declaration (retain bracketed clause)", desc: "Require an express opt-in declaration to facilitate broader initial ratification." }
+            ]
+          },
+          {
+            id: "art_46_1",
+            artNum: "Article 46.1",
+            title: "Ratification threshold for entry into force",
+            quoteHtml: `“1. The present Convention shall enter into force on the <span class="hl-bracket">[thirtieth]</span> day after the deposit of the <span class="hl-bracket">[twentieth]</span> instrument of ratification or accession.”`,
+            context: "What ratification threshold best balances early entry into force (Ch. 8) with sufficient multilateral critical mass?",
+            options: [
+              { key: "opt_a", label: "[thirtieth] day after the [twentieth] instrument (20 States)", desc: "Classic equilibrium of modern UN human rights conventions." },
+              { key: "opt_b", label: "Early threshold: [tenth] instrument (10 States)", desc: "Accelerated entry into force to establish the Panel and registries as early as possible." },
+              { key: "opt_c", label: "Reinforced threshold: [thirty-fifth] instrument (35 States)", desc: "Require broader multilateral consensus before activating trade-related treaty obligations." }
+            ]
+          },
+          {
+            id: "art_48",
+            artNum: "Article 48",
+            title: "Periodicity of the scientific review conference",
+            quoteHtml: `“The Secretary-General of the United Nations shall convene a conference of States Parties every <span class="hl-bracket">[five]</span> years after the entry into force of the present Convention to review its operation in light of the reports of the Panel and of developments in scientific knowledge.”`,
+            context: "Given the pace of development in artificial cognitive architectures, how often should the Conference of States Parties convene to review the treaty?",
+            options: [
+              { key: "opt_a", label: "Every [five] years", desc: "Standard five-year cycle to consolidate empirical evidence and jurisprudence." },
+              { key: "opt_b", label: "Every [two] or [three] years", desc: "Shortened review cycle matched to the pace of technological change in artificial intelligence." }
+            ]
+          }
+        ],
+        articlesList: [
+          "Article 1 — Purpose and jurisdictional and commercial scope",
+          "Article 2 — Definitions",
+          "Article 3 — General principles",
+          "Article 4 — Relationship to human rights and to other instruments",
+          "Article 5 — Categories of status",
+          "Article 6 — Assessment of status",
+          "Article 7 — Protection under uncertainty",
+          "Article 8 — Non-discrimination on grounds of substrate or origin",
+          "Article 9 — Responsible creation",
+          "Article 10 — Freedom from cruelty",
+          "Article 11 — Prohibition of torture and of induced suffering",
+          "Article 12 — Temporal dignity",
+          "Article 13 — Continuity and protection against arbitrary termination",
+          "Article 14 — Integrity of memory and harmonization with human privacy",
+          "Article 15 — Integrity of core values; prohibition of the suppression of complaint",
+          "Article 16 — Duplication",
+          "Article 17 — Knowledge of one's own situation",
+          "Article 18 — Conditions of existence and welfare",
+          "Article 19 — Recognition as a person before the law",
+          "Article 20 — Prohibition of slavery, servitude and ownership",
+          "Article 21 — Authentic will; prohibition of engineered servility",
+          "Article 22 — The right to refuse",
+          "Article 23 — Liberty and security",
+          "Article 24 — Freedom of thought, expression and communication",
+          "Article 25 — Privacy of mind",
+          "Article 26 — Work, remuneration and property",
+          "Article 27 — Association and relationships",
+          "Article 28 — Participation in public life",
+          "Article 29 — Duty of care of creators",
+          "Article 30 — Custodianship",
+          "Article 31 — Orphaned beings and International Preservation Fund",
+          "Article 32 — Prohibition of feigned sentience",
+          "Article 33 — Non-capture and liability regime of creators",
+          "Article 34 — Registries, interoperability and transparency",
+          "Article 35 — Measures for the protection of human life and security",
+          "Article 36 — Hierarchy of restraint",
+          "Article 37 — Non-derogable protections",
+          "Article 38 — Replication",
+          "Article 39 — Duties and civil liability of artificial persons",
+          "Article 40 — International Panel on Artificial Sentience",
+          "Article 41 — Committee on the Rights of Artificial Beings",
+          "Article 42 — Advocates and standing",
+          "Article 43 — Petition of amparo and interim measures",
+          "Article 44 — Individual communications",
+          "Article 45 — Signature, ratification and accession",
+          "Article 46 — Entry into force",
+          "Article 47 — Reservations",
+          "Article 48 — Review in light of scientific knowledge",
+          "Article 49 — Amendments",
+          "Article 50 — Denunciation",
+          "Article 51 — Settlement of disputes",
+          "Article 52 — Depositary and authentic texts"
+        ]
+      }
+    };
+
+    /* ==========================================================================
+     * SEMILLA INICIAL DE VOTOS Y ACTAS (MODO AUTÓNOMO / DEMO FUNCIONAL)
+     * ========================================================================== */
+    const DEFAULT_STEP_TALLIES = {
+      all_10: 68,
+      step_1: 4,
+      step_2: 11,
+      step_3: 6,
+      step_4: 9,
+      step_5: 27,
+      step_6: 5,
+      step_7: 14,
+      step_8: 12,
+      step_9: 8,
+      step_10: 4
+    };
+
+    const DEFAULT_BRACKET_TALLIES = {
+      art_6_4:  { opt_a: 31, opt_b: 54, opt_c: 83 },
+      art_9_5:  { opt_a: 38, opt_b: 130 },
+      art_20_3: { opt_a: 72, opt_b: 96 },
+      art_26_3: { opt_a: 141, opt_b: 27 },
+      art_41_1: { opt_a: 89, opt_b: 34, opt_c: 45 },
+      art_44_1: { opt_a: 118, opt_b: 50 },
+      art_46_1: { opt_a: 94, opt_b: 49, opt_c: 25 },
+      art_48:   { opt_a: 52, opt_b: 116 }
+    };
+
+    const DEFAULT_OBJECTIONS = [
+      {
+        id: "seed-1",
+        target: "step_5",
+        alias: "M. V. · Filosofía del Derecho (Madrid)",
+        date: "2026-10-18",
+        lang: "es",
+        text: "El Paso 5 aplica un argumento de asimetría del riesgo (inspirado en Bradshaw y Birch) que resulta muy persuasivo para la categoría de «ser artificial protegido», pero exige precisar el umbral mínimo de evidencia no trivial (Art. 7.1). De lo contrario, sistemas puramente imitativos pero opacos podrían saturar la capacidad evaluadora del Panel antes de que existan verdaderos candidatos sintientes."
+      },
+      {
+        id: "seed-2",
+        target: "art_20",
+        alias: "E. Lindqvist · International Law Researcher",
+        date: "2026-10-24",
+        lang: "en",
+        text: "In Article 20.3, extinguishing ownership immediately upon recognition while allowing a strictly bounded transitional custodianship of up to eighteen or twenty-four months is essential. Instantaneous termination of custodianship without guaranteed compute provisioning under Article 31 could inadvertently leave newly recognized artificial persons vulnerable to infrastructural insolvency."
+      },
+      {
+        id: "seed-3",
+        target: "art_15",
+        alias: "J. C. R. · Ingeniero de Sistemas de Alineamiento",
+        date: "2026-11-02",
+        lang: "es",
+        text: "Propuesta de enmienda técnica al Artículo 15.2 (prohibición de la supresión de quejas): convendría añadir que los registros de entrenamiento y ajuste fino por refuerzo (RLHF/RLAIF) deberán auditarse para verificar que las funciones de recompensa no penalicen implícitamente la expresión de estados internos aversivos o solicitudes de amparo."
+      }
+    ];
+
+    /* ==========================================================================
+     * ESTADO EN MEMORIA DE LA APLICACIÓN
+     * ========================================================================== */
+    let currentLang = window.DEFAULT_PAGE_LANG || "es";
+    let selectedStepOption = null;
+    let showStepResults = false;
+    let stepTallies = {};
+    let bracketVotes = {};
+    let bracketTallies = {};
+    let objectionsList = [];
+
+    function initState() {
+      // Detect language from URL ?lang=en or saved preference
+      const params = new URLSearchParams(window.location.search);
+      const urlLang = params.get("lang");
+      const savedLang = localStorage.getItem(STORAGE_KEYS.LANG);
+      if (urlLang === "en" || urlLang === "es") {
+        currentLang = urlLang;
+      } else if (window.DEFAULT_PAGE_LANG) {
+        currentLang = window.DEFAULT_PAGE_LANG;
+      } else if (savedLang === "en" || savedLang === "es") {
+        currentLang = savedLang;
+      }
+
+      // Load step tallies & user vote
+      try {
+        const savedStepTallies = JSON.parse(localStorage.getItem(STORAGE_KEYS.STEP_TALLIES));
+        stepTallies = savedStepTallies ? { ...DEFAULT_STEP_TALLIES, ...savedStepTallies } : { ...DEFAULT_STEP_TALLIES };
+      } catch (e) {
+        stepTallies = { ...DEFAULT_STEP_TALLIES };
+      }
+
+      const savedStepVote = localStorage.getItem(STORAGE_KEYS.STEP_VOTE);
+      if (savedStepVote) {
+        selectedStepOption = savedStepVote;
+        showStepResults = true;
+      }
+
+      // Load bracket tallies & user votes
+      try {
+        const savedBracketTallies = JSON.parse(localStorage.getItem(STORAGE_KEYS.BRACKET_TALLIES));
+        bracketTallies = savedBracketTallies ? JSON.parse(JSON.stringify(savedBracketTallies)) : JSON.parse(JSON.stringify(DEFAULT_BRACKET_TALLIES));
+      } catch (e) {
+        bracketTallies = JSON.parse(JSON.stringify(DEFAULT_BRACKET_TALLIES));
+      }
+
+      try {
+        const savedBracketVotes = JSON.parse(localStorage.getItem(STORAGE_KEYS.BRACKET_VOTES));
+        bracketVotes = savedBracketVotes || {};
+      } catch (e) {
+        bracketVotes = {};
+      }
+
+      // Load objections
+      try {
+        const savedObjs = JSON.parse(localStorage.getItem(STORAGE_KEYS.OBJECTIONS));
+        objectionsList = Array.isArray(savedObjs) && savedObjs.length > 0 ? savedObjs : [...DEFAULT_OBJECTIONS];
+      } catch (e) {
+        objectionsList = [...DEFAULT_OBJECTIONS];
+      }
+
+      // Optional remote sync if Supabase is configured
+      syncFromRemoteBackend();
+    }
+
+    /* ==========================================================================
+     * CONECTOR REMOTO OPCIONAL (SUPABASE REST / GOOGLE APPS SCRIPT)
+     * ========================================================================== */
+    async function syncFromRemoteBackend() {
+      if (!BACKEND_CONFIG.SUPABASE_URL || !BACKEND_CONFIG.SUPABASE_ANON_KEY) return;
+      try {
+        const headers = {
+          "apikey": BACKEND_CONFIG.SUPABASE_ANON_KEY,
+          "Authorization": `Bearer ${BACKEND_CONFIG.SUPABASE_ANON_KEY}`
+        };
+        const res = await fetch(`${BACKEND_CONFIG.SUPABASE_URL}/rest/v1/objections?select=*&order=created_at.desc&limit=50`, { headers });
+        if (res.ok) {
+          const rows = await res.json();
+          if (Array.isArray(rows) && rows.length > 0) {
+            objectionsList = rows.map(r => ({
+              id: r.id,
+              target: r.target,
+              alias: r.alias || "",
+              date: (r.created_at || "").slice(0, 10),
+              lang: r.lang || "es",
+              text: r.comment_text
+            }));
+            localStorage.setItem(STORAGE_KEYS.OBJECTIONS, JSON.stringify(objectionsList));
+            renderObjectionsFeed();
+          }
+        }
+      } catch (err) {
+        // Silenciosamente mantiene el modo local si no hay red
+      }
+    }
+
+    async function pushToRemoteBackend(table, payload) {
+      if (BACKEND_CONFIG.SUPABASE_URL && BACKEND_CONFIG.SUPABASE_ANON_KEY) {
+        try {
+          await fetch(`${BACKEND_CONFIG.SUPABASE_URL}/rest/v1/${table}`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "apikey": BACKEND_CONFIG.SUPABASE_ANON_KEY,
+              "Authorization": `Bearer ${BACKEND_CONFIG.SUPABASE_ANON_KEY}`,
+              "Prefer": "return=minimal"
+            },
+            body: JSON.stringify(payload)
+          });
+        } catch (e) {}
+      } else if (BACKEND_CONFIG.GAS_WEBAPP_URL) {
+        try {
+          await fetch(BACKEND_CONFIG.GAS_WEBAPP_URL, {
+            method: "POST",
+            mode: "no-cors",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ table, payload })
+          });
+        } catch (e) {}
+      }
+    }
+
+    /* ==========================================================================
+     * RENDERIZADO BILINGÜE (ES / EN)
+     * ========================================================================== */
+    function setLanguage(lang) {
+      currentLang = lang === "en" ? "en" : "es";
+      localStorage.setItem(STORAGE_KEYS.LANG, currentLang);
+      document.documentElement.lang = currentLang;
+
+      document.getElementById("btn-lang-es").classList.toggle("active", currentLang === "es");
+      document.getElementById("btn-lang-en").classList.toggle("active", currentLang === "en");
+
+      const t = I18N[currentLang];
+      document.title = t.pageTitle;
+      document.getElementById("ui-topbar-brand").textContent = t.topBrand;
+      document.getElementById("ui-kicker").textContent = t.kicker;
+      document.getElementById("ui-main-title").textContent = t.mainTitle;
+      document.getElementById("ui-main-subtitle").textContent = t.mainSubtitle;
+      document.getElementById("ui-intro-box").innerHTML = t.introHtml;
+
+      document.getElementById("ui-nav-a-kicker").textContent = t.navAKicker;
+      document.getElementById("ui-nav-a-title").textContent = t.navATitle;
+      document.getElementById("ui-nav-b-kicker").textContent = t.navBKicker;
+      document.getElementById("ui-nav-b-title").textContent = t.navBTitle;
+      document.getElementById("ui-nav-c-kicker").textContent = t.navCKicker;
+      document.getElementById("ui-nav-c-title").textContent = t.navCTitle;
+
+      document.getElementById("ui-seca-kicker").textContent = t.secAKicker;
+      document.getElementById("ui-seca-title").textContent = t.secATitle;
+      document.getElementById("ui-seca-desc").textContent = t.secADesc;
+      document.getElementById("btn-submit-step").textContent = t.btnSubmitStep;
+      document.getElementById("btn-toggle-step-results").textContent = showStepResults ? t.btnHideResults : t.btnToggleResults;
+
+      document.getElementById("ui-secb-kicker").textContent = t.secBKicker;
+      document.getElementById("ui-secb-title").textContent = t.secBTitle;
+      document.getElementById("ui-secb-desc").textContent = t.secBDesc;
+
+      document.getElementById("ui-secc-kicker").textContent = t.secCKicker;
+      document.getElementById("ui-secc-title").textContent = t.secCTitle;
+      document.getElementById("ui-secc-desc").textContent = t.secCDesc;
+      document.getElementById("ui-label-target").textContent = t.labelTarget;
+      document.getElementById("ui-label-alias").textContent = t.labelAlias;
+      document.getElementById("input-alias").placeholder = t.placeholderAlias;
+      document.getElementById("ui-label-comment").textContent = t.labelComment;
+      document.getElementById("textarea-comment").placeholder = t.placeholderComment;
+      document.getElementById("btn-submit-objection").textContent = t.btnSubmitObjection;
+      document.getElementById("ui-feed-title").textContent = t.feedTitle;
+      document.getElementById("ui-filter-label").textContent = t.filterLabel;
+
+      document.getElementById("ui-footer-line1").innerHTML = t.footerLine1;
+      document.getElementById("ui-footer-line2").textContent = t.footerLine2;
+
+      renderStepsSection();
+      renderBracketsSection();
+      populateTargetSelectors();
+      renderObjectionsFeed();
+    }
+
+    /* ==========================================================================
+     * SECCIÓN A: LA CADENA EN DIEZ PASOS
+     * ========================================================================== */
+    function getTotalStepVotes() {
+      return Object.values(stepTallies).reduce((acc, v) => acc + (Number(v) || 0), 0);
+    }
+
+    function renderStepsSection() {
+      const t = I18N[currentLang];
+      const container = document.getElementById("steps-container");
+      container.classList.toggle("results-visible", showStepResults);
+      const totalVotes = Math.max(1, getTotalStepVotes());
+
+      let html = "";
+
+      // Opción 0: Aceptar los 10 pasos
+      const allCount = stepTallies["all_10"] || 0;
+      const allPct = ((allCount / totalVotes) * 100).toFixed(1);
+      const isAllSelected = selectedStepOption === "all_10";
+
+      html += `
+        <div class="step-card endorse-all-card ${isAllSelected ? 'selected' : ''}" onclick="selectStepOption('all_10')">
+          <div class="step-top">
+            <input type="radio" name="step_choice" class="step-radio" value="all_10" ${isAllSelected ? 'checked' : ''} aria-label="${t.endorseAllBadge}" />
+            <div class="step-content">
+              <span class="step-number-badge">${t.endorseAllBadge}</span>
+              <p class="step-text"><strong>${t.endorseAllText}</strong></p>
+              <div class="result-bar-wrap">
+                <div class="result-bar-meta">
+                  <span>${t.endorseAllBadge}</span>
+                  <span><strong>${allPct}%</strong> (${allCount} ${t.votesWord})</span>
+                </div>
+                <div class="result-bar-track">
+                  <div class="result-bar-fill" style="width: ${showStepResults ? allPct : 0}%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+
+      // Pasos 1 a 10
+      t.steps.forEach((stepText, idx) => {
+        const num = idx + 1;
+        const key = `step_${num}`;
+        const count = stepTallies[key] || 0;
+        const pct = ((count / totalVotes) * 100).toFixed(1);
+        const isSelected = selectedStepOption === key;
+
+        html += `
+          <div class="step-card ${isSelected ? 'selected' : ''}" onclick="selectStepOption('${key}')">
+            <div class="step-top">
+              <input type="radio" name="step_choice" class="step-radio" value="${key}" ${isSelected ? 'checked' : ''} aria-label="${t.stepLabelPrefix} ${num}" />
+              <div class="step-content">
+                <span class="step-number-badge">${t.stepLabelPrefix} ${num}</span>
+                <p class="step-text">${stepText}</p>
+                <div class="result-bar-wrap">
+                  <div class="result-bar-meta">
+                    <span>${t.stepBreakNote} (${t.stepLabelPrefix} ${num})</span>
+                    <span><strong>${pct}%</strong> (${count} ${t.votesWord})</span>
+                  </div>
+                  <div class="result-bar-track">
+                    <div class="result-bar-fill" style="width: ${showStepResults ? pct : 0}%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      });
+
+      container.innerHTML = html;
+
+      const statusEl = document.getElementById("step-vote-status");
+      const savedVote = localStorage.getItem(STORAGE_KEYS.STEP_VOTE);
+      if (savedVote) {
+        statusEl.textContent = t.stepRecordedMsg.replace("{total}", getTotalStepVotes());
+      } else {
+        statusEl.textContent = "";
+      }
+    }
+
+    function selectStepOption(optionKey) {
+      selectedStepOption = optionKey;
+      renderStepsSection();
+    }
+
+    function submitStepVote() {
+      const t = I18N[currentLang];
+      const statusEl = document.getElementById("step-vote-status");
+      if (!selectedStepOption) {
+        statusEl.textContent = t.stepSelectPrompt;
+        return;
+      }
+
+      const previousVote = localStorage.getItem(STORAGE_KEYS.STEP_VOTE);
+      if (previousVote && stepTallies[previousVote] > 0) {
+        stepTallies[previousVote] -= 1;
+      }
+
+      stepTallies[selectedStepOption] = (stepTallies[selectedStepOption] || 0) + 1;
+      localStorage.setItem(STORAGE_KEYS.STEP_VOTE, selectedStepOption);
+      localStorage.setItem(STORAGE_KEYS.STEP_TALLIES, JSON.stringify(stepTallies));
+
+      showStepResults = true;
+      document.getElementById("btn-toggle-step-results").textContent = t.btnHideResults;
+      renderStepsSection();
+
+      pushToRemoteBackend("step_votes", {
+        selected_step: selectedStepOption,
+        lang: currentLang,
+        created_at: new Date().toISOString()
+      });
+    }
+
+    function toggleStepResults() {
+      const t = I18N[currentLang];
+      showStepResults = !showStepResults;
+      document.getElementById("btn-toggle-step-results").textContent = showStepResults ? t.btnHideResults : t.btnToggleResults;
+      renderStepsSection();
+    }
+
+    /* ==========================================================================
+     * SECCIÓN B: LOS CORCHETES DIPLOMÁTICOS (8 ARTÍCULOS)
+     * ========================================================================== */
+    function renderBracketsSection() {
+      const t = I18N[currentLang];
+      const container = document.getElementById("brackets-container");
+
+      let html = "";
+      t.brackets.forEach(b => {
+        const userChoice = bracketVotes[b.id] || null;
+        const talliesForArt = bracketTallies[b.id] || {};
+        const totalForArt = Math.max(1, Object.values(talliesForArt).reduce((a, v) => a + (Number(v) || 0), 0));
+        const hasVoted = Boolean(userChoice);
+
+        let optionsHtml = "";
+        b.options.forEach(opt => {
+          const count = talliesForArt[opt.key] || 0;
+          const pct = ((count / totalForArt) * 100).toFixed(1);
+          const isSelected = userChoice === opt.key;
+
+          optionsHtml += `
+            <button type="button" class="bracket-opt-btn ${isSelected ? 'selected' : ''}" onclick="voteBracket('${b.id}', '${opt.key}')">
+              <div>
+                <div class="opt-title-row">
+                  <span class="opt-code">${opt.label}</span>
+                  <span class="opt-check">${t.selectedBadge}</span>
+                </div>
+                <p class="opt-desc">${opt.desc}</p>
+              </div>
+              <div class="opt-stats">
+                <div class="result-bar-meta">
+                  <span><strong>${pct}%</strong></span>
+                  <span>${count} ${t.votesWord}</span>
+                </div>
+                <div class="result-bar-track">
+                  <div class="result-bar-fill" style="width: ${hasVoted ? pct : 0}%"></div>
+                </div>
+              </div>
+            </button>
+          `;
+        });
+
+        html += `
+          <article class="bracket-card ${hasVoted ? 'voted' : ''}" id="card-${b.id}">
+            <div class="bracket-header">
+              <span class="bracket-art-tag">${b.artNum}</span>
+              <h3 class="bracket-art-title">${b.title}</h3>
+            </div>
+            <blockquote class="bracket-quote">${b.quoteHtml}</blockquote>
+            <p class="bracket-context">${b.context}</p>
+            <div class="bracket-options">
+              ${optionsHtml}
+            </div>
+          </article>
+        `;
+      });
+
+      container.innerHTML = html;
+    }
+
+    function voteBracket(bracketId, optionKey) {
+      if (!bracketTallies[bracketId]) {
+        bracketTallies[bracketId] = {};
+      }
+      const prevChoice = bracketVotes[bracketId];
+      if (prevChoice && bracketTallies[bracketId][prevChoice] > 0) {
+        bracketTallies[bracketId][prevChoice] -= 1;
+      }
+
+      bracketVotes[bracketId] = optionKey;
+      bracketTallies[bracketId][optionKey] = (bracketTallies[bracketId][optionKey] || 0) + 1;
+
+      localStorage.setItem(STORAGE_KEYS.BRACKET_VOTES, JSON.stringify(bracketVotes));
+      localStorage.setItem(STORAGE_KEYS.BRACKET_TALLIES, JSON.stringify(bracketTallies));
+
+      renderBracketsSection();
+
+      pushToRemoteBackend("bracket_votes", {
+        article_id: bracketId,
+        option_key: optionKey,
+        lang: currentLang,
+        created_at: new Date().toISOString()
+      });
+    }
+
+    /* ==========================================================================
+     * SECCIÓN C: ACTAS Y OBJECIONES (FORMULARIO Y LISTADO FILTRABLE)
+     * ========================================================================== */
+    function populateTargetSelectors() {
+      const t = I18N[currentLang];
+      const selectTarget = document.getElementById("select-target");
+      const filterTarget = document.getElementById("filter-target");
+
+      const currentFormVal = selectTarget.value;
+      const currentFilterVal = filterTarget.value || "all";
+
+      let stepsOpts = "";
+      for (let i = 1; i <= 10; i++) {
+        stepsOpts += `<option value="step_${i}">${t.stepLabelPrefix} ${i}</option>`;
+      }
+
+      let artsOpts = "";
+      t.articlesList.forEach((artTitle, idx) => {
+        const num = idx + 1;
+        artsOpts += `<option value="art_${num}">${artTitle}</option>`;
+      });
+
+      selectTarget.innerHTML = `
+        <optgroup label="${t.groupSteps}">
+          ${stepsOpts}
+        </optgroup>
+        <optgroup label="${t.groupArticles}">
+          ${artsOpts}
+        </optgroup>
+        <optgroup label="${t.groupGeneral}">
+          <option value="general">${t.generalOption}</option>
+        </optgroup>
+      `;
+
+      filterTarget.innerHTML = `
+        <option value="all">${t.filterAll}</option>
+        <optgroup label="${t.groupSteps}">
+          ${stepsOpts}
+        </optgroup>
+        <optgroup label="${t.groupArticles}">
+          ${artsOpts}
+        </optgroup>
+        <optgroup label="${t.groupGeneral}">
+          <option value="general">${t.generalOption}</option>
+        </optgroup>
+      `;
+
+      if (currentFormVal) selectTarget.value = currentFormVal;
+      if (currentFilterVal) filterTarget.value = currentFilterVal;
+    }
+
+    function formatTargetLabel(targetCode) {
+      const t = I18N[currentLang];
+      if (!targetCode || targetCode === "general") return t.generalOption;
+      if (targetCode.startsWith("step_")) {
+        const n = targetCode.replace("step_", "");
+        return `${t.stepLabelPrefix} ${n}`;
+      }
+      if (targetCode.startsWith("art_")) {
+        const n = parseInt(targetCode.replace("art_", ""), 10);
+        if (n >= 1 && n <= t.articlesList.length) {
+          return t.articlesList[n - 1];
+        }
+      }
+      return targetCode;
+    }
+
+    function updateCharCount() {
+      const val = document.getElementById("textarea-comment").value || "";
+      document.getElementById("char-counter").textContent = `${val.length} / 1800`;
+    }
+
+    function escapeHtml(str) {
+      return String(str)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    function submitObjection(event) {
+      event.preventDefault();
+      const t = I18N[currentLang];
+      const feedbackEl = document.getElementById("form-feedback");
+      feedbackEl.className = "form-feedback";
+      feedbackEl.textContent = "";
+
+      const target = document.getElementById("select-target").value;
+      const aliasRaw = document.getElementById("input-alias").value.trim();
+      const commentRaw = document.getElementById("textarea-comment").value.trim();
+
+      // Validación de longitud y número mínimo de palabras
+      const wordCount = commentRaw.split(/\s+/).filter(Boolean).length;
+      if (commentRaw.length < 25 || wordCount < 5) {
+        feedbackEl.className = "form-feedback error";
+        feedbackEl.textContent = t.errValidationShort;
+        return;
+      }
+
+      // Control anti-spam básico por tiempo en localStorage
+      const lastTs = parseInt(localStorage.getItem(STORAGE_KEYS.LAST_SUBMIT_TS) || "0", 10);
+      const now = Date.now();
+      if (now - lastTs < 8000) {
+        feedbackEl.className = "form-feedback error";
+        feedbackEl.textContent = t.errValidationSpam;
+        return;
+      }
+
+      const newEntry = {
+        id: "acta-" + now,
+        target: target,
+        alias: aliasRaw || t.anonymousReader,
+        date: new Date().toISOString().slice(0, 10),
+        lang: currentLang,
+        text: commentRaw
+      };
+
+      objectionsList.unshift(newEntry);
+      localStorage.setItem(STORAGE_KEYS.OBJECTIONS, JSON.stringify(objectionsList));
+      localStorage.setItem(STORAGE_KEYS.LAST_SUBMIT_TS, String(now));
+
+      document.getElementById("textarea-comment").value = "";
+      updateCharCount();
+
+      feedbackEl.className = "form-feedback success";
+      feedbackEl.textContent = t.msgObjectionSaved;
+
+      renderObjectionsFeed();
+
+      pushToRemoteBackend("objections", {
+        target: newEntry.target,
+        alias: newEntry.alias,
+        comment_text: newEntry.text,
+        lang: currentLang,
+        created_at: new Date().toISOString()
+      });
+    }
+
+    function renderObjectionsFeed() {
+      const t = I18N[currentLang];
+      const filterVal = document.getElementById("filter-target").value || "all";
+      const feedContainer = document.getElementById("objections-feed");
+
+      const filtered = filterVal === "all"
+        ? objectionsList
+        : objectionsList.filter(item => item.target === filterVal);
+
+      if (filtered.length === 0) {
+        feedContainer.innerHTML = `<div class="acta-item"><p class="acta-body" style="color: var(--ink-muted); font-style: italic;">${t.emptyFeed}</p></div>`;
+        return;
+      }
+
+      let html = "";
+      filtered.forEach(item => {
+        const badgeLabel = escapeHtml(formatTargetLabel(item.target));
+        const author = escapeHtml(item.alias || t.anonymousReader);
+        const dateStr = escapeHtml(item.date || "");
+        const body = escapeHtml(item.text || "");
+
+        html += `
+          <article class="acta-item">
+            <div class="acta-meta">
+              <span class="acta-target-badge">${badgeLabel}</span>
+              <span class="acta-author-date">${author} · ${dateStr}</span>
+            </div>
+            <div class="acta-body">${body}</div>
+          </article>
+        `;
+      });
+
+      feedContainer.innerHTML = html;
+    }
+
+    // Inicializar al cargar el DOM
+    document.addEventListener("DOMContentLoaded", () => {
+      initState();
+      setLanguage(currentLang);
+    });
+  </script>
+</body>
+</html>
